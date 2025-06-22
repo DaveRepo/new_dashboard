@@ -9,11 +9,11 @@ import plotly.graph_objects as go
 
 # Load data
 # df = pd.read_csv("lged_2021-2022.csv")
-df1 = pd.read_csv('enrollment_2021-2022.csv')
-df2 = pd.read_csv('completion_2021-2022.csv')
-df3 = pd.read_csv('repeat_2021-2022.csv')
-df4 = pd.read_csv('retention_2021-2022.csv')
-df5 = pd.read_csv('shgbv_2021-2022.csv')
+df1 = pd.read_csv('enrollment.csv')
+df2 = pd.read_csv('completion.csv')
+df3 = pd.read_csv('repeat.csv')
+df4 = pd.read_csv('retention.csv')
+df5 = pd.read_csv('shgbv.csv')
 
 # =================================================================================================================
 # search items
