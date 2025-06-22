@@ -1,19 +1,11 @@
-import json
 import dash
 from dash import dcc, html, Input, Output
 import dash_bootstrap_components as dbc
-import dash_molstar
 import pandas as pd
 import plotly.graph_objects as go
-import plotly.express as px
-from dash_molstar.utils import molstar_helper
 
 
 
-with open('text.json') as f:
-    data = json.load(f)
-    desc = data['desc']
-    second_desc = data['second_desc']
 
 # Load data
 # df = pd.read_csv("lged_2021-2022.csv")
@@ -359,13 +351,16 @@ def display_page(pathname):
                 ], className='alt-text'),
                 html.Div([
                     html.H2("Welcome to the Educate HER Dashboard"),
-                    html.P(desc)
+                    # html.P(desc)
+                    html.P("Educate HER is a national coalition of institutions and advocates committed to promoting gender equity and equality in education in Liberia. Our key strategies include, research and policy review, awareness and civic participation, capacity building of education stakeholders and key actors, and advocacy and policy engagement. Our Vision: All girls have access to safe, quality education in Liberia. One of the key strategies to achieving gender equity and equality in education is ensuring Sustainable Systems for Evidence- Based Decision Making. Lack of access to information poses a significant challenge to policy implementation and to effective civil society advocacy for this purpose. Improving the availability of and access to disaggregated data on girls education will better inform policy-making and implementation, including school policies and gender-specific programming. Making that data accessible to civil society organizations and the public will increase civic participation as it relates to holding officials accountable for girls education.", )
                 ], className='overlay-text')
             ], className='banner-container')
         ]),
         
         dbc.Col([
-            html.Div(html.P(second_desc), className='text-justify'),
+            # html.Div(html.P(second_desc), className='text-justify'),
+            html.Div(html.P("Since 2022, Educate HER has worked closely with the Department of Planning, Research, and Development to conduct quarterly data collection and analysis on girls education. We are committed to expanding that partnership to provide tangible supports that are in line with section 3.1 of the ESP and section 7 of the NPGE. With financial support from Global Partnership for Education (GPE) programs, BACKUP Education through Deutsche Gesellschaft fur Internationale Zusammenarbeit (GIZ) and Education Out Load through Oxfam Danmark, we have partnered with the Ministry of Education to develop and manage the Liberia Girls Education Dashboard. This dashboard is for stakeholders to access (gender-) disaggregated data needed to inform school policies and gender-specific programming and accelerate the National Policy on Girls Education implementation. Educate HER intends to ensure that data related to girls education in Liberia is collected in line with the Girls Education Policy, up to date, and publicly available for education stakeholders to review for program planning, education financing, and policy review."), 
+                     className='text-justify'),
             # html.Div(html.P('You can zoom, rotate the virus model in the 3D Viewer to explore the virus.'), className='text-justify'),
             html.Img(src='/assets/db.png', alt='Virus', className="img-fluid"),
             # html.Div([html.I("Front. Virol.")," 1:815388. doi: 10.3389/fviro.2021.815388"], className='ref text-end')
